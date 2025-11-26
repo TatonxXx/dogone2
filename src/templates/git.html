@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Git & GitHub</title>
+</head>
+<body>
+    <h1>สรุปการใช้งาน Git และ GitHub</h1>
+
+    <h2>Git คืออะไร?</h2>
+    <p>
+        Git คือโปรแกรมสำหรับจัดการเวอร์ชันของโค้ด (Version Control)
+        ใช้เก็บประวัติการแก้ไขไฟล์ ทำให้ย้อนไปดูหรือนำโค้ดเวอร์ชันเก่ากลับมาได้
+    </p>
+
+    <h2>GitHub คืออะไร?</h2>
+    <p>
+        GitHub คือเว็บไซต์ที่เอา Git repository ไปเก็บบนออนไลน์
+        ทำให้แชร์โค้ดกับคนอื่นได้ และใช้งานร่วมกันเป็นทีมได้สะดวก
+    </p>
+
+    <h2>ตัวอย่างขั้นตอนการใช้งาน Git + GitHub</h2>
+    <ol>
+        <li>สมัครบัญชี GitHub และสร้าง Repository ใหม่</li>
+        <li>ในเครื่องเราสร้างโฟลเดอร์โปรเจกต์ แล้วใช้คำสั่ง <code>git init</code></li>
+        <li>เพิ่มไฟล์ทั้งหมดด้วย <code>git add .</code></li>
+        <li>บันทึกเวอร์ชันด้วย <code>git commit -m "first commit"</code></li>
+        <li>ผูกกับ GitHub ด้วยคำสั่ง <code>git remote add origin &lt;url ของ repo&gt;</code></li>
+        <li>อัพโหลดโค้ดขึ้น GitHub ด้วย <code>git push -u origin main</code> (หรือ master แล้วแต่ชื่อ branch)</li>
+    </ol>
+
+    <br>
+    <a href="/">⬅ กลับหน้า Home</a>
+</body>
+</html>

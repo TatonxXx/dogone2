@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker</title>
+</head>
+<body>
+    <h1>สรุปการใช้งาน Docker กับ Flask</h1>
+
+    <h2>Docker คืออะไร?</h2>
+    <p>
+        Docker คือเครื่องมือสำหรับสร้างสภาพแวดล้อมจำลองที่เรียกว่า container
+        ทำให้เรารันโปรแกรมได้เหมือนกันทุกเครื่อง ไม่ต้องกลัวปัญหา
+        "เครื่องเราใช้ได้ แต่เครื่องคนอื่นใช้ไม่ได้"
+    </p>
+
+    <h2>การสร้าง Docker image</h2>
+    <ol>
+        <li>สร้างไฟล์ <code>Dockerfile</code> ในโฟลเดอร์โปรเจกต์</li>
+        <li>เขียนขั้นตอนใน Dockerfile เช่น ใช้ base image, ติดตั้ง library, รันแอป</li>
+        <li>ใช้คำสั่ง <code>docker build -t my-flask-app .</code> เพื่อสร้าง image</li>
+    </ol>
+
+    <h2>การทดสอบรัน container</h2>
+    <ol>
+        <li>ใช้คำสั่ง <code>docker run -p 80:80 my-flask-app</code></li>
+        <li>เปิดเว็บเบราว์เซอร์ไปที่ <code>http://localhost</code> เพื่อตรวจสอบว่าเว็บทำงาน</li>
+    </ol>
+
+    <h2>การ push image ไป Docker Hub</h2>
+    <ol>
+        <li>สมัครและล็อกอิน Docker Hub</li>
+        <li>ใช้คำสั่ง <code>docker tag my-flask-app username/my-flask-app</code></li>
+        <li>ใช้คำสั่ง <code>docker push username/my-flask-app</code></li>
+        <li>เข้าเว็บ Docker Hub จะเห็น image ถูกอัพโหลดไปแล้ว</li>
+    </ol>
+
+    <br>
+    <a href="/">⬅ กลับหน้า Home</a>
+</body>
+</html>
